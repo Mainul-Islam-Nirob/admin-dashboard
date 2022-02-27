@@ -3,10 +3,10 @@
 :root {
     --gray: hsl(214deg 32% 91%);
     --blue: hsl(201deg 79% 46%);
-    --search-bar: hsl(214deg 32% 91%);
     --yellow: hsl(42deg 87% 55%);
-    --font: hsl(0deg 0% 3%);
-    --font-white: hsl(0deg 0% 100%);
+    --black: hsl(0deg 0% 3%);
+    --white: hsl(0deg 0% 100%);
+    --sideBar-font-size: 22px;
 }
 
 *{
@@ -18,8 +18,8 @@
 
 }
 
-html {
-    /* background-color: aqua; */
+a {
+    text-decoration: none;
 }
 
 .container {
@@ -35,36 +35,82 @@ html {
                           "sidebar projects projects projects trending";
 }
 
+/* Header Style */
 .header {
     grid-area: header;
-    /* position: sticky; */
 }
 
+
+/* Sidebar Style */
 .sideBar {
     grid-area: sidebar;
     background-color: var(--blue);
-    /* position: relative; */
-    /* height: 100vh; */
-    /* width: 300px; */
-    /* border: 5px solid red; */
-    
+    color: var(--white);
+    padding: 20px;    
 }
 
-/* .logo img {
-    color: aliceblue;
-    width: 300px;
-    height: auto;
-} */
+.sideBar a {
+    color: var(--white);
+    font-size: var(--sideBar-font-size);
 
+}
+
+.sideBar .logo {
+    display: grid;
+    font-size: 32px;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.sideBar .logo img {
+    width: 50px;
+    height: 50px;
+    justify-self: center;
+}
+.sideBar img {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-top {
+    margin-bottom: 50px;
+}
+
+.navItem {
+    margin-top: 20px;
+}
+
+.navItem a {
+     display: grid;
+     grid-template-columns: 60px 1fr;
+     align-items: center;
+}
+
+.navItem a:hover {
+    transform: scale(1.03);
+}
+
+.navItem a img {
+    justify-self: center;
+}
+
+/* Projects Style */
 .projects {
     grid-area: projects;
 }
 
+
+/* Announcements Style */
 .announcements {
     grid-area: announcements;
 }
 
+
+/* Trending Style */
 .trending {
     grid-area: trending;
 }
+
+
 
